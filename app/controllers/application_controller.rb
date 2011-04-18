@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
       Rubygems: #{Gem::VERSION rescue 'n/a'}
       Bundler: #{Bundler::VERSION rescue 'n/a'}
       Passenger: #{PhusionPassenger::VERSION_STRING rescue 'n/a'}
+      Database adapter: #{ActiveRecord::Base.connection.adapter_name}
     EO_INFO
   end
 end
