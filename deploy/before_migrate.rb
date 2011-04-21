@@ -13,5 +13,5 @@ end
   file.puts "#{release_path.sub(/releases\/\d+/, 'shared')}/config/memcached.yml='#{`cat #{release_path.sub(/releases\/\d+/, 'shared')}/config/memcached.yml 2>&1`}'"
   file.puts "#{release_path}/config/memcached.yml='#{`cat #{release_path}/config/memcached.yml 2>&1`}'"
   file.puts "bundle check: #{`su deploy -c 'cd #{release_path} && bundle check 2>&1'`}"
-  file.puts "rake db:version: #{`rake db:version 2>&1`}"
+  file.puts "rake db:version: #{`su deploy -c 'cd #{release_path} && rake db:version 2>&1'`}"
 end
