@@ -4,7 +4,7 @@ template '/root/scalarium-agent/some_file' do
   owner 'root'
   group 'root'
   mode 0600
-  variables :version => node.scalarium.agent_version
+  variables :version => 'omfg'
 end
 
 ::File.open("/tmp/dhdbg-#{__FILE__.gsub('/', '_')}", 'w') do |file|
