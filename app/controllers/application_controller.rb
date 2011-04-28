@@ -8,6 +8,7 @@ class ApplicationController < ActionController::Base
       Bundler: #{Bundler::VERSION rescue 'n/a'}
       Passenger: #{PhusionPassenger::VERSION_STRING rescue 'n/a'}
       Database adapter: #{ActiveRecord::Base.connection.adapter_name}
+      Rails root: #{Rails.root}
     EO_INFO
   end
 end
